@@ -1,0 +1,238 @@
+--library declaration
+library ieee;
+use ieee.std_logic_1164.all;
+
+--entity
+entity TopLevelModule is
+	generic(
+		RS232_DATA_BITS		:integer:=8;
+		BAUD_RATE		  	:integer:=115200;
+		SYS_CLK_FREQ 	 	:integer:=27000000
+	);
+	port(
+		clk				:in std_logic;
+		Rst				:in std_logic;
+		
+		--RS232 ports
+		rs232_rx_pin		:in std_logic;
+		rs232_tx_pin		:out std_logic;
+        --Switches ports
+        SW0                 :in std_logic_vector(3 downto 0);
+        SW1                 :in std_logic_vector(3 downto 0);
+        --4_7segment ports
+        Segment             :out std_logic_vector(6 downto 0);
+        Seg_en              :out std_logic_vector(3 downto 0);
+        --fifo rd,wr,leds
+        full_led            :out std_logic;
+        empty_led           :out std_logic;
+        btn_wr              :in std_logic;
+        btn_rd              :in std_logic
+
+        
+		
+	);
+
+end entity;
+
+--architecture
+architecture rtl of TopLevelModule is
+	
+	component UART_tx is
+	generic(
+		RS232_DATA_BITS :integer;
+		SYS_CLK_FREQ :integer;
+		BAUD_RATE : integer
+	);
+	port(
+		clk : in std_logic;
+		rst : in std_logic;
+		
+		TxStart :in std_logic;
+		TxData 	:in std_logic_vector(RS232_DATA_BITS-1 downto 0);
+		TxReady :out std_logic;
+		UART_tx_pin	:out std_logic
+	);
+	end component;
+	
+	component UART_rx is
+	generic(
+		RS232_DATA_BITS		:integer;
+		BAUD_RATE		  	:integer;
+		SYS_CLK_FREQ 	 	:integer
+	);
+	port(
+		clk				:in std_logic;
+		Rst				:in std_logic;
+		RS232_Rx		:in std_logic;--Serial Asynchronous signal
+		RxIRQClear		:in std_logic;
+		RxIRQ			:out std_logic;
+        rx_rd_ptr		:out std_logic;
+		RxData			:out std_logic_vector(RS232_DATA_BITS-1 downto 0)
+	);
+	end component;
+
+    component fifo is 
+    port(
+            clk      : in std_logic;
+            reset    : in std_logic;
+            write_en : in std_logic;
+            read_en  : in std_logic;
+            data_in  : in std_logic_vector(7 downto 0);
+            data_out : out std_logic_vector(7 downto 0);
+            full     : out std_logic;
+            empty    : out std_logic
+        );
+    end component;
+
+    component segment_Decoder is
+	port(
+    	clk27 :in std_logic;
+        rst :in std_logic;
+        data_in :in std_logic_vector(7 downto 0);
+    	SW0 : in std_logic_vector(3 downto 0);
+        SW1 : in std_logic_vector(3 downto 0);
+        SEG_en:out std_logic_vector(3 downto 0);
+        Seg1: out std_logic_vector(6 downto 0)
+    );
+    end component;
+
+
+type state_type is (IDLE,data_toTXData,START_TRANSMITTER);
+signal SMVariable :state_type;
+signal TxStart 			: std_logic;
+signal TxReady 			: std_logic;
+signal RxIRQ 			: std_logic;
+signal RxIRQClear       : std_logic;
+signal RxData 			: std_logic_vector(RS232_DATA_BITS-1 downto 0);
+signal TxData    : std_logic_vector(RS232_DATA_BITS-1 downto 0);
+signal fifo_tx_data_out    : std_logic_vector(RS232_DATA_BITS-1 downto 0);
+signal fifo_rx_data_out    : std_logic_vector(RS232_DATA_BITS-1 downto 0);
+signal tx_fifo_empty        : std_logic;
+signal rx_fifo_full        : std_logic;
+signal  rx_write_en           :std_logic;
+signal  rx_read_en           :std_logic:='0';
+signal  tx_read_en           :std_logic:='0';
+signal wr_en_fallingEdge   :std_logic;
+signal wr_en_Delay:std_logic;
+
+begin
+    
+	UUT_UART_tx:UART_tx 
+	generic map(
+		RS232_DATA_BITS		=>RS232_DATA_BITS,
+		BAUD_RATE		  	=>BAUD_RATE,
+		SYS_CLK_FREQ 	 	=>SYS_CLK_FREQ
+	)
+	port map(
+		clk 			=>clk,
+		rst 			=>rst,
+		
+		TxStart 		=>TxStart,
+		TxData 			=>TxData,
+		TxReady 		=>TxReady,
+		UART_tx_pin		=>(rs232_tx_pin)
+	);
+    TxData<=fifo_tx_data_out;
+	UUT_UART_rx:UART_rx
+	generic map(
+		RS232_DATA_BITS		=>RS232_DATA_BITS,
+		BAUD_RATE		  	=>BAUD_RATE,
+		SYS_CLK_FREQ 	 	=>SYS_CLK_FREQ
+	)
+	port map(
+		clk				 =>clk,
+		Rst				 =>Rst,
+		RS232_Rx		 =>(rs232_rx_pin ),--Serial Asynchronous signal
+		RxIRQClear		 =>RxIRQClear,
+		RxIRQ			 =>RxIRQ,
+        rx_rd_ptr		 =>rx_write_en,
+		RxData			 =>RxData
+	);
+
+    UUT_FIFO_rx:fifo
+    port map(
+            clk      =>clk,
+            reset    =>Rst,
+            write_en =>rx_write_en,
+            read_en  =>rx_read_en,
+            data_in  =>RxData,
+            data_out =>FIFO_rx_Data_out,
+            full     =>rx_fifo_full,
+            empty    => empty_led
+        );
+
+    UUT_FIFO_tx:fifo
+    port map(
+            clk      =>clk,
+            reset    =>Rst,
+            write_en =>btn_wr,
+            read_en  =>tx_read_en,
+            data_in  =>(SW1&SW0),
+            data_out =>FIFO_tx_Data_out,
+            full     =>full_led,
+            empty    =>tx_fifo_empty
+        );    
+    
+    UUT_SegDec:segment_Decoder
+	port map(
+    	clk27       =>clk,
+        rst         =>Rst,
+        data_in     =>FIFO_rx_Data_out,
+    	SW0         =>SW0,
+        SW1         =>SW1,
+        SEG_en      =>SEG_en,
+        Seg1        =>Segment
+    );
+	rx_read_en<=btn_rd;
+
+
+    tx_fifo_wr_en_FallingEdgeDetector :process(clk,rst)
+	begin
+		if rst='1' then 
+			wr_en_fallingEdge<='0';
+			wr_en_Delay <='1';
+		elsif rising_edge(clk) then
+			wr_en_Delay <=btn_wr;
+				if btn_wr ='0' and wr_en_Delay='1' then
+					wr_en_fallingEdge<='1';
+				else
+					wr_en_fallingEdge<='0';
+				end if;
+		end if;
+    end process;
+
+    
+	SM_proc:process(clk,rst)
+	begin
+		if rst='1' then 
+			TxStart<='0';
+			SMVariable <=IDLE;
+		elsif rising_edge(clk) then
+		
+			case SMVariable is
+				When IDLE => 
+					if tx_fifo_empty='0' and TxReady='1' and btn_wr='0' and wr_en_fallingEdge='0' and wr_en_Delay='0' then
+						SMVariable<=data_toTXData;
+                        tx_read_en<='1';
+                    else SMVariable <=IDLE;
+                    end if;
+                            
+				When data_toTXData => 
+                        tx_read_en<='0';
+						SMVariable<=START_TRANSMITTER;
+						TxStart<= not tx_FIFO_empty;
+                   
+					
+					
+				When START_TRANSMITTER =>
+					TxStart<='0';
+					SMVariable <=IDLE;
+					
+				when others=>
+					SMVariable <=IDLE;
+			end case;
+		
+		end if;
+	end process;
+	
+end rtl;

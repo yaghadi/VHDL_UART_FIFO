@@ -1,0 +1,73 @@
+[N
+7
+3
+3 rtl
+6
+12 SYS_CLK_FREQ
+2
+14 toplevelmodule
+4
+15 RS232_DATA_BITS
+7
+10 IDLE_STATE
+1
+63 C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/work
+5
+9 BAUD_RATE
+]
+[G
+1
+2
+3
+1
+4
+1
+0
+8
+0
+0 0
+0
+0
+]
+[G
+1
+2
+3
+1
+5
+1
+0
+115200
+0
+0 0
+0
+0
+]
+[G
+1
+2
+3
+1
+7
+0
+0
+2
+0
+0 0
+0
+0
+]
+[G
+1
+2
+3
+1
+6
+1
+0
+27000000
+0
+0 0
+0
+0
+]

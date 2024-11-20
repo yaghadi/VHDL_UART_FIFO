@@ -1,0 +1,14 @@
+-d C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\impl\gwsynthesis\UART.vg
+-p GW2AR-18C-QFN88-8
+-pn GW2AR-LV18QN88C8/I7
+-cst C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\UART.cst
+-cfg C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\impl\pnr\device.cfg
+-sdc C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\TimingConstraint.sdc
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-correct_hold 1
+-route_maxfan 23
+-global_freq 100.000

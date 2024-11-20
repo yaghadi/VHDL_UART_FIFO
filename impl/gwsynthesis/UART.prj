@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW2AR-18C" package="QFN88" speed="8" partNumber="GW2AR-LV18QN88C8/I7"/>
+    <FileList>
+        <File path="C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\7segment_Decoder.vhd" type="vhdl"/>
+        <File path="C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\BaudClkGenerator.vhd" type="vhdl"/>
+        <File path="C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\Serialiser.vhd" type="vhdl"/>
+        <File path="C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\ShiftRegister.vhd" type="vhdl"/>
+        <File path="C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\Synchroniser.vhd" type="vhdl"/>
+        <File path="C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\TopLevelModule.vhd" type="vhdl"/>
+        <File path="C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\UART_rx.vhd" type="vhdl"/>
+        <File path="C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\UART_tx.vhd" type="vhdl"/>
+        <File path="C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\debouncer.vhd" type="vhdl"/>
+        <File path="C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\keypad4x4.vhd" type="vhdl"/>
+        <File path="C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\synch_fifo.vhd" type="vhdl"/>
+        <File path="C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\ws2812.vhd" type="vhdl"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="0"/>
+        <Option type="global_freq" value="100.000"/>
+        <Option type="looplimit" value="2000"/>
+        <Option type="output_file" value="C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\impl\gwsynthesis\UART.vg"/>
+        <Option type="print_all_synthesis_warning" value="0"/>
+        <Option type="ram_rw_check" value="0"/>
+        <Option type="verilog_language" value="verilog-2001"/>
+        <Option type="vhdl_language" value="vhdl-2008"/>
+    </OptionList>
+</Project>

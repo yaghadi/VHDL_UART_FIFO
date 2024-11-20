@@ -1,0 +1,23 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW2AR-18C" pn="GW2AR-LV18QN88C8/I7">gw2ar18c-000</Device>
+    <FileList>
+        <File path="src/7segment_Decoder.vhd" type="file.vhdl" enable="1"/>
+        <File path="src/BaudClkGenerator.vhd" type="file.vhdl" enable="1"/>
+        <File path="src/Serialiser.vhd" type="file.vhdl" enable="1"/>
+        <File path="src/ShiftRegister.vhd" type="file.vhdl" enable="1"/>
+        <File path="src/Synchroniser.vhd" type="file.vhdl" enable="1"/>
+        <File path="src/TopLevelModule.vhd" type="file.vhdl" enable="1"/>
+        <File path="src/UART_rx.vhd" type="file.vhdl" enable="1"/>
+        <File path="src/UART_tx.vhd" type="file.vhdl" enable="1"/>
+        <File path="src/debouncer.vhd" type="file.vhdl" enable="1"/>
+        <File path="src/keypad4x4.vhd" type="file.vhdl" enable="1"/>
+        <File path="src/synch_fifo.vhd" type="file.vhdl" enable="1"/>
+        <File path="src/ws2812.vhd" type="file.vhdl" enable="1"/>
+        <File path="src/UART.cst" type="file.cst" enable="1"/>
+        <File path="src/TimingConstraint.sdc" type="file.sdc" enable="1"/>
+    </FileList>
+</Project>

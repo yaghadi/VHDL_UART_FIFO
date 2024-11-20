@@ -1,0 +1,80 @@
+GowinSynthesis start
+Running parser ...
+Analyzing VHDL file 'C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\7segment_Decoder.vhd'
+Analyzing entity 'segment_decoder'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\7segment_Decoder.vhd":6)
+Analyzing architecture 'rtl'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\7segment_Decoder.vhd":19)
+Analyzing VHDL file 'C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\BaudClkGenerator.vhd'
+Analyzing entity 'baudclkgenerator'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\BaudClkGenerator.vhd":5)
+Analyzing architecture 'rtl'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\BaudClkGenerator.vhd":22)
+Analyzing VHDL file 'C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\Serialiser.vhd'
+Analyzing entity 'serialiser'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\Serialiser.vhd":5)
+Analyzing architecture 'rtl'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\Serialiser.vhd":21)
+Analyzing VHDL file 'C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\ShiftRegister.vhd'
+Analyzing entity 'shiftregister'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\ShiftRegister.vhd":5)
+Analyzing architecture 'rtl'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\ShiftRegister.vhd":20)
+Analyzing VHDL file 'C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\Synchroniser.vhd'
+Analyzing entity 'synchroniser'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\Synchroniser.vhd":6)
+Analyzing architecture 'rtl'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\Synchroniser.vhd":20)
+Analyzing VHDL file 'C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\TopLevelModule.vhd'
+Analyzing entity 'toplevelmodule'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\TopLevelModule.vhd":6)
+Analyzing architecture 'rtl'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\TopLevelModule.vhd":40)
+Analyzing VHDL file 'C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\UART_rx.vhd'
+Analyzing entity 'uart_rx'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\UART_rx.vhd":6)
+Analyzing architecture 'rtl'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\UART_rx.vhd":25)
+Analyzing VHDL file 'C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\UART_tx.vhd'
+Analyzing entity 'uart_tx'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\UART_tx.vhd":5)
+Analyzing architecture 'rtl'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\UART_tx.vhd":22)
+Analyzing VHDL file 'C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\debouncer.vhd'
+Analyzing entity 'debouncer'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\debouncer.vhd":5)
+Analyzing architecture 'rtl'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\debouncer.vhd":12)
+Analyzing VHDL file 'C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\keypad4x4.vhd'
+Analyzing entity 'key_pad'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\keypad4x4.vhd":6)
+Analyzing architecture 'key_pad_rtl'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\keypad4x4.vhd":16)
+Analyzing VHDL file 'C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\synch_fifo.vhd'
+Analyzing entity 'fifo'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\synch_fifo.vhd":6)
+Analyzing architecture 'rtl'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\synch_fifo.vhd":19)
+Analyzing VHDL file 'C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\ws2812.vhd'
+Analyzing entity 'ws2812'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\ws2812.vhd":6)
+Analyzing architecture 'rtl'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\ws2812.vhd":17)
+Processing 'TopLevelModule(rtl)'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\TopLevelModule.vhd":6)
+Processing 'UART_tx(rs232_data_bits=8,sys_clk_freq=27000000,baud_rate=115200)(rtl)'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\UART_tx.vhd":5)
+Processing 'Serialiser(dwidth=10)(rtl)'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\Serialiser.vhd":5)
+Processing 'BaudClkGenerator(rtl)'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\BaudClkGenerator.vhd":5)
+Processing 'UART_rx(rtl)'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\UART_rx.vhd":6)
+Processing 'ShiftRegister(dout_width=8,shift_dir='R')(rtl)'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\ShiftRegister.vhd":5)
+Processing 'Synchroniser(idle_state='1')(rtl)'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\Synchroniser.vhd":6)
+Processing 'BaudClkGenerator(number_of_clocks=9,uart_rx=true)(rtl)'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\BaudClkGenerator.vhd":5)
+'others' clause is never selected("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\UART_rx.vhd":177)
+Processing 'fifo(rtl)'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\synch_fifo.vhd":6)
+Extracting RAM for identifier 'mem'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\synch_fifo.vhd":21)
+Processing 'segment_Decoder(rtl)'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\7segment_Decoder.vhd":6)
+'others' clause is never selected("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\7segment_Decoder.vhd":70)
+Processing 'Synchroniser(idle_state='0')(rtl)'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\Synchroniser.vhd":6)
+Processing 'debouncer(rtl)'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\debouncer.vhd":5)
+Processing 'WS2812(rtl)'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\ws2812.vhd":6)
+WARN  (EX4206) : Using initial value for 'red_light' since it is never assigned("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\ws2812.vhd":32)
+WARN  (EX4206) : Using initial value for 'green_light' since it is never assigned("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\ws2812.vhd":33)
+WARN  (EX4206) : Using initial value for 'no_light' since it is never assigned("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\ws2812.vhd":34)
+Processing 'Key_Pad(Key_Pad_RTL)'("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\keypad4x4.vhd":6)
+WARN  (EX4206) : Using initial value for 'key_lookup_data' since it is never assigned("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\keypad4x4.vhd":39)
+'others' clause is never selected("C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\TopLevelModule.vhd":336)
+NOTE  (EX0101) : Current top module is "TopLevelModule"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\impl\gwsynthesis\UART.vg" completed
+[100%] Generate report file "C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\impl\gwsynthesis\UART_syn.rpt.html" completed
+GowinSynthesis finish

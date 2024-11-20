@@ -1,0 +1,144 @@
+[
+ {
+  "InstFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/TopLevelModule.vhd",
+  "InstLine" : 6,
+  "InstName" : "TopLevelModule",
+  "ModuleFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/TopLevelModule.vhd",
+  "ModuleLine" : 6,
+  "ModuleName" : "TopLevelModule",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/TopLevelModule.vhd",
+    "InstLine" : 168,
+    "InstName" : "inst_UART_tx",
+    "ModuleFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/UART_tx.vhd",
+    "ModuleLine" : 5,
+    "ModuleName" : "UART_tx",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/UART_tx.vhd",
+      "InstLine" : 65,
+      "InstName" : "UART_Serialiser_INST",
+      "ModuleFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/Serialiser.vhd",
+      "ModuleLine" : 5,
+      "ModuleName" : "Serialiser"
+     },
+     {
+      "InstFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/UART_tx.vhd",
+      "InstLine" : 79,
+      "InstName" : "UART_TIMING_INST",
+      "ModuleFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/BaudClkGenerator.vhd",
+      "ModuleLine" : 5,
+      "ModuleName" : "BaudClkGenerator"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/TopLevelModule.vhd",
+    "InstLine" : 184,
+    "InstName" : "inst_UART_rx",
+    "ModuleFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/UART_rx.vhd",
+    "ModuleLine" : 6,
+    "ModuleName" : "UART_rx",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/UART_rx.vhd",
+      "InstLine" : 86,
+      "InstName" : "ShiftRegister_INST",
+      "ModuleFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/ShiftRegister.vhd",
+      "ModuleLine" : 5,
+      "ModuleName" : "ShiftRegister"
+     },
+     {
+      "InstFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/UART_rx.vhd",
+      "InstLine" : 101,
+      "InstName" : "Synchroniser_INST",
+      "ModuleFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/Synchroniser.vhd",
+      "ModuleLine" : 6,
+      "ModuleName" : "Synchroniser"
+     },
+     {
+      "InstFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/UART_rx.vhd",
+      "InstLine" : 112,
+      "InstName" : "BaudClkGenerator_RX_INST",
+      "ModuleFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/BaudClkGenerator.vhd",
+      "ModuleLine" : 5,
+      "ModuleName" : "BaudClkGenerator"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/TopLevelModule.vhd",
+    "InstLine" : 200,
+    "InstName" : "inst_FIFO_rx",
+    "ModuleFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/synch_fifo.vhd",
+    "ModuleLine" : 6,
+    "ModuleName" : "fifo"
+   },
+   {
+    "InstFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/TopLevelModule.vhd",
+    "InstLine" : 212,
+    "InstName" : "inst_FIFO_tx",
+    "ModuleFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/synch_fifo.vhd",
+    "ModuleLine" : 6,
+    "ModuleName" : "fifo"
+   },
+   {
+    "InstFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/TopLevelModule.vhd",
+    "InstLine" : 224,
+    "InstName" : "inst_SegDec",
+    "ModuleFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/7segment_Decoder.vhd",
+    "ModuleLine" : 6,
+    "ModuleName" : "segment_Decoder"
+   },
+   {
+    "InstFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/TopLevelModule.vhd",
+    "InstLine" : 235,
+    "InstName" : "inst_sync_rdBtn",
+    "ModuleFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/Synchroniser.vhd",
+    "ModuleLine" : 6,
+    "ModuleName" : "Synchroniser"
+   },
+   {
+    "InstFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/TopLevelModule.vhd",
+    "InstLine" : 246,
+    "InstName" : "inst_sync_wrBtn",
+    "ModuleFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/Synchroniser.vhd",
+    "ModuleLine" : 6,
+    "ModuleName" : "Synchroniser"
+   },
+   {
+    "InstFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/TopLevelModule.vhd",
+    "InstLine" : 257,
+    "InstName" : "inst_wrBtn_Deb",
+    "ModuleFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/debouncer.vhd",
+    "ModuleLine" : 5,
+    "ModuleName" : "debouncer"
+   },
+   {
+    "InstFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/TopLevelModule.vhd",
+    "InstLine" : 265,
+    "InstName" : "inst_rdBtn_Deb",
+    "ModuleFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/debouncer.vhd",
+    "ModuleLine" : 5,
+    "ModuleName" : "debouncer"
+   },
+   {
+    "InstFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/TopLevelModule.vhd",
+    "InstLine" : 273,
+    "InstName" : "inst_ws2812",
+    "ModuleFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/ws2812.vhd",
+    "ModuleLine" : 6,
+    "ModuleName" : "WS2812"
+   },
+   {
+    "InstFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/TopLevelModule.vhd",
+    "InstLine" : 281,
+    "InstName" : "inst_keyPad",
+    "ModuleFile" : "C:/Gowin/Gowin_V1.9.10.02_x64/IDE/bin/Documents/UART _FIFO/src/keypad4x4.vhd",
+    "ModuleLine" : 6,
+    "ModuleName" : "Key_Pad"
+   }
+  ]
+ }
+]

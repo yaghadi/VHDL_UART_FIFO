@@ -1,0 +1,30 @@
+Reading netlist file: "C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\impl\gwsynthesis\UART.vg"
+Parsing netlist file "C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\impl\gwsynthesis\UART.vg" completed
+Processing netlist completed
+Reading constraint file: "C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\src\UART.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+WARN  (PR1014) : Generic routing resource will be used to clock signal 'clk_d' by the specified constraint. And then it may lead to the excessive delay or skew
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Running power analysis......
+[100%] Power analysis completed
+Generate file "C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\impl\pnr\UART.power.html" completed
+Generate file "C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\impl\pnr\UART.pin.html" completed
+Generate file "C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\impl\pnr\UART.rpt.html" completed
+Generate file "C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\impl\pnr\UART.rpt.txt" completed
+Generate file "C:\Gowin\Gowin_V1.9.10.02_x64\IDE\bin\Documents\UART _FIFO\impl\pnr\UART.tr.html" completed
+Wed Nov 20 16:17:40 2024
+

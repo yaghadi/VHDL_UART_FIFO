@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="TopLevelModule" Register="6" Lut="8" T_Register="273(6)" T_Alu="123(0)" T_Lut="315(8)" T_Ssram="8(0)">
+    <SubModule name="inst_UART_tx" T_Register="23(0)" T_Lut="34(0)">
+        <SubModule name="UART_Serialiser_INST" Register="9" Lut="9" T_Register="9(9)" T_Lut="9(9)"/>
+        <SubModule name="UART_TIMING_INST" Register="14" Lut="25" T_Register="14(14)" T_Lut="25(25)"/>
+    </SubModule>
+    <SubModule name="inst_UART_rx" Register="6" Lut="5" T_Register="30(6)" T_Lut="29(5)">
+        <SubModule name="ShiftRegister_INST" Register="8" T_Register="8(8)"/>
+        <SubModule name="Synchroniser_INST" Register="2" T_Register="2(2)"/>
+        <SubModule name="BaudClkGenerator_RX_INST" Register="14" Lut="24" T_Register="14(14)" T_Lut="24(24)"/>
+    </SubModule>
+    <SubModule name="inst_FIFO_rx" Register="50" Alu="40" Lut="29" Ssram="4" T_Register="50(50)" T_Alu="40(40)" T_Lut="29(29)" T_Ssram="4(4)"/>
+    <SubModule name="inst_FIFO_tx" Register="48" Alu="40" Lut="27" Ssram="4" T_Register="48(48)" T_Alu="40(40)" T_Lut="27(27)" T_Ssram="4(4)"/>
+    <SubModule name="inst_SegDec" Register="18" Alu="17" Lut="20" T_Register="18(18)" T_Alu="17(17)" T_Lut="20(20)"/>
+    <SubModule name="inst_sync_rdBtn" Register="2" T_Register="2(2)"/>
+    <SubModule name="inst_sync_wrBtn" Register="2" T_Register="2(2)"/>
+    <SubModule name="inst_wrBtn_Deb" Register="2" Lut="1" T_Register="2(2)" T_Lut="1(1)"/>
+    <SubModule name="inst_rdBtn_Deb" Register="2" Lut="1" T_Register="2(2)" T_Lut="1(1)"/>
+    <SubModule name="inst_ws2812" Register="55" Alu="8" Lut="134" T_Register="55(55)" T_Alu="8(8)" T_Lut="134(134)"/>
+    <SubModule name="inst_keyPad" Register="35" Alu="18" Lut="32" T_Register="35(35)" T_Alu="18(18)" T_Lut="32(32)"/>
+</Module>
